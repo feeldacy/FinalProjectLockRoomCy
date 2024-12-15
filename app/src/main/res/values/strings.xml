@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">FinalProjectLockRoomCy</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <string-array name="session">
+        <item>Choose Session</item>
+        <item>Session 1 (07.00 - 12.00)</item>
+        <item>Session 2 (13.00 - 17.00)</item>
+        <item>Session 3 (19.00 - 23.00)</item>
+        <item>Session 4 (00.00 - 06.00)</item>
+    </string-array>
+
+    <string-array name="room_type">
+        <item>Open Workspace</item>
+        <item>Online Meeting Room</item>
+        <item>Creative Studio</item>
+        <item>Solo Study Room</item>
+        <item>Small Group Room (3 - 4 People)</item>
+        <item>Discussion Room (5 - 10 People)</item>
+        <item>Meeting Room (5 - 10 People)</item>
+        <item>Conference Room (10-20 People)</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

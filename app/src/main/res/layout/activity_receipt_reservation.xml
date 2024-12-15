@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ui.receipt.ReceiptReservationActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reservation Form"
+        android:textSize="28sp"
+        android:textColor="@color/dark_brown"
+        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txt_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill in and your ready to Lock in!"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/name_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/field_bg"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_sub_title">
+
+
+        <LinearLayout
+            android:id="@+id/name_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_person_24"
+                />
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/field_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Your Name"
+            android:inputType="text"
+            android:onClick="showCalendar"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/date_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/field_bg"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_container">
+
+
+        <LinearLayout
+            android:id="@+id/date_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_date_range_24"
+                />
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/field_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Choose a date when you want to lock in."
+            android:inputType="date"
+            android:onClick="showCalendar"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/room_type_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/field_bg"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_container">
+
+
+        <LinearLayout
+            android:id="@+id/room_type_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_room_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_meeting_room_24"
+                />
+
+            <TextView
+                android:id="@+id/txt_room_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Type"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinner_room_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/session_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/field_bg"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/room_type_container">
+
+
+        <LinearLayout
+            android:id="@+id/session_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            >
+
+            <ImageView
+                android:id="@+id/ic_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_access_time_filled_24"
+                />
+
+            <TextView
+                android:id="@+id/txt_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Session"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinner_session"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_book_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Room"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@id/session_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="@color/dark_brown"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="@color/light_brown"
+        app:layout_constraintTop_toBottomOf="@id/btn_book_room"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
