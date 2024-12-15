@@ -125,7 +125,6 @@ class ReceiptReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateS
     }
 
     private fun postData(username: String,  roomType: String, session: String, date: String) {
-        // Create an instance of the request model
         val reservationRequest = ReceiptReservationRequest(
             username = username,
             roomType = roomType,
@@ -133,10 +132,8 @@ class ReceiptReservationActivity : AppCompatActivity(), DatePickerDialog.OnDateS
             date = date
         )
 
-        // Create an instance of the API service
         val apiService = ApiClient.getInstance()
 
-        // Make the API call
         apiService.createReceipt(reservationRequest).enqueue(object : Callback<GeneralResponse> {
             override fun onResponse(call: Call<GeneralResponse>, response: Response<GeneralResponse>) {
                 if (response.isSuccessful) {

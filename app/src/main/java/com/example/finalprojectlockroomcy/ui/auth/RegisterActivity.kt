@@ -33,12 +33,14 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         binding.btnRegister.setOnClickListener {
+            // ambil data dari ui
             val usernameInput = binding.fieldUsername.text.toString()
             val emailInput = binding.fieldEmail.text.toString()
             val phoneInput = binding.fieldPhone.text.toString()
             val passwordInput = binding.fieldPassword.text.toString()
             val confirmPasswordInput = binding.fieldConfirmPassword.text.toString()
 
+            // simpan data ke sharedpref
             if (passwordInput == confirmPasswordInput){
                 val editor = sharedPreferences.edit()
                 editor.putString("username", usernameInput)

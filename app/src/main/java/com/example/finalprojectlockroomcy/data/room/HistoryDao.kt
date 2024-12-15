@@ -9,12 +9,11 @@ import androidx.room.Query
 
 @Dao
 interface HistoryDao {
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(historyItem: HistoryItem)
 
     @Query("SELECT * FROM history_receipt")
     suspend fun getAllHistory(): List<HistoryItem>
 
-    @Query("SELECT username FROM history_receipt")
-    suspend fun getAllUsernames(): List<String>
 }

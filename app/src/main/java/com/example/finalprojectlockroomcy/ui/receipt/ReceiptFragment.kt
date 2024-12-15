@@ -92,6 +92,7 @@ class ReceiptFragment : Fragment() {
                                 upcomingReceipts.add(receipt)
                             }
                         }
+                        // pembuatan recyclerview
                         showUpcomingReceipts(upcomingReceipts)
                     }
                 }

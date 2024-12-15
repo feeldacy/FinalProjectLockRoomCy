@@ -23,15 +23,17 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val sharedPreferences = requireContext().getSharedPreferences("userData", Context.MODE_PRIVATE)
 
+        val sharedPreferences = requireContext().getSharedPreferences("userData", Context.MODE_PRIVATE)
 
         val username = sharedPreferences.getString("username", null)
         val email = sharedPreferences.getString("email", null)
         val phone = sharedPreferences.getString("phone", null)
 
+        // attach data ke ui
         binding.txtUsername.text = "$username"
         binding.txtUserEmail.text = "$email"
         binding.txtUserPhone.text = "$phone"

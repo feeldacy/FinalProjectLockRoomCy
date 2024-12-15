@@ -23,20 +23,17 @@ class LoginActivity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("userData", MODE_PRIVATE)
 
         binding.btnLogin.setOnClickListener{
+            // Mengambil input dari ui
             val usernameInput = binding.fieldUsername.text.toString()
             val passwordInput = binding.fieldPassword.text.toString()
 
+            // Mengambil data dari sharedpref
             val savedUsername = sharedPreferences.getString("username", "")
             val savedPassword = sharedPreferences.getString("password", "")
 
-            val savedEmail = sharedPreferences.getString("email", "")
-            val savedPhone = sharedPreferences.getString("phone", "")
-
+            // Cek input dan data apakah matching
             if (usernameInput == savedUsername && passwordInput == savedPassword){
                 val intentToMainActivity = Intent(this, MainActivity::class.java)
-                intentToMainActivity.putExtra("username", savedUsername)
-                intentToMainActivity.putExtra("email", savedEmail)
-                intentToMainActivity.putExtra("phone", savedPhone)
                 startActivity(intentToMainActivity)
                 finish()
             } else {

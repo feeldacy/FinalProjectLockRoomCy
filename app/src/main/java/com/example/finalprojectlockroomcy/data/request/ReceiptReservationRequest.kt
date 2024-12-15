@@ -15,4 +15,5 @@ data class ReceiptReservationRequest(
 
     @SerializedName("date")
     val date: String = ""
+
 )

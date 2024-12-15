@@ -18,6 +18,4 @@ interface ApiService {
     @POST("<receipt-lockroom>")
     fun createReceipt(@Body request: ReceiptReservationRequest): Call<GeneralResponse>
 
-    @DELETE("<receipt-lockroom>/{id}")
-    fun deleteFruit(@Path("id") id: String): Call<GeneralResponse>
 }
